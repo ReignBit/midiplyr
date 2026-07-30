@@ -20,3 +20,31 @@ synthesizing of sound since soundwave math is completely out of my ballpark.
 This is the frontend, using SDL2 to show a graphical representation of the track.
 I have a vague idea of what I want it to look like - mainly like a retro piano
 roll kind of style with the option to change voice banks / synth sounds.
+
+## How to build
+### Requirements
+- CMake 3.15+
+- A C compiler (GCC or Clang)
+- SDL2
+
+### Commands
+
+```bash
+git clone https://github.com/ReignBit/midiplyr.git
+cd midiplyr
+
+cmake -B build
+cmake --build build
+```
+
+The executable will be located at:
+```text
+build/midi-app/midi-app
+```
+
+### Run
+
+```bash
+chmod +x ./build/midi-app/midi-app
+./build/midiapp/midi-app
+```
