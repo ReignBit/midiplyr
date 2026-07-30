@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.16)
+
+file(GLOB SRC_FILES
+    src/*.c
+)
+
+
+add_library(midi-lib
+    ${SRC_FILES}
+)
+
+target_include_directories(midi-lib
+    PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+target_compile_features(midi-lib
+    PUBLIC
+    c_std_11
+)
+
+target_compile_options(midi-lib
+    PRIVATE
+        -Wall
+        -pedantic
+)
