@@ -48,3 +48,9 @@ build/midi-app/midi-app
 chmod +x ./build/midi-app/midi-app
 ./build/midiapp/midi-app
 ```
+
+## Resources
+
+Here are some resources that I have used whilst researching the midi file format:
+ - [Track Event Specifications](http://www.somascape.org/midi/tech/mfile.html#events)
+ - [Midi File Format](https://ccrma.stanford.edu/~craig/14q/midifile/MidiFileFormat.html)
