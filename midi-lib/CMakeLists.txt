@@ -6,7 +6,11 @@ file(GLOB SRC_FILES
 
 
 add_library(midi-lib
-    ${SRC_FILES}
+    "src/midi.c"
+    "src/midierr.c"
+    "src/bytereader.c"
+    src/midieventvector.c
+
 )
 
 target_include_directories(midi-lib
@@ -23,4 +27,13 @@ target_compile_options(midi-lib
     PRIVATE
         -Wall
         -pedantic
+)
+
+add_executable(midi-test
+    tests/test_midi.c
+)
+
+target_link_libraries(midi-test
+    PRIVATE
+        midi-lib
 )

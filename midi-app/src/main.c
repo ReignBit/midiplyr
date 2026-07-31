@@ -27,6 +27,14 @@ void init_sdl()
 
 int main(void)
 {
+    midi_file_t midi;
+    midi_err_t err = midi_file_load("example.midi", &midi);
+
+    if (err != MIDI_OK) { printf("%s\n", midi_err_str(err)); }
+}
+
+int main_(void)
+{
     app_t app = {0};
 
     // Initialise SDL first and get a window going.

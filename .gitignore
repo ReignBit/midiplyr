@@ -70,3 +70,6 @@ build.ninja
 *.tar
 *.gz
 *.zip
+
+*.midi
+*.mid
